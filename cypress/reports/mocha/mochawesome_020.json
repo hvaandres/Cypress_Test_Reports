@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-01-05T18:52:28.524Z",
+    "end": "2021-01-05T18:52:57.480Z",
+    "duration": 28956,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e6299018-1bec-4e51-8753-487cb45e204d",
+      "title": "",
+      "fullFile": "cypress/integration/examples/QAM/test7.spec.js",
+      "file": "cypress/integration/examples/QAM/test7.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c6396769-c3b0-4746-93e7-683dcbe2f4ed",
+          "title": "Working with plugins",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "File upload",
+              "fullTitle": "Working with plugins File upload",
+              "timedOut": null,
+              "duration": 1533,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://cgi-lib.berkeley.edu/ex/fup.html'); // upload file\nvar fileName = 'SampleFile.pdf';\n/* For cypress-file-upload version < 4.0.0\ncy.fixture(fileName).then(fileContent => {\n    cy.get('[type=\"file\"]').upload({ fileContent, fileName, mimeType: 'application/pdf' });\n})*/\n// For cypress-file-upload version > 4.0.0\ncy.get('[type=\"file\"]').attachFile(fileName);\ncy.get('[type=\"submit\"]').click();\ncy.contains(\"You've uploaded a file.  Your notes on the file were:\");",
+              "err": {
+                "message": "Error: A fixture file could not be found at any of the following paths:\n\n> cypress/fixtures/SampleFile.pdf\n> cypress/fixtures/SampleFile.pdf{{extension}}\n\nCypress looked for these file extensions at the provided path:\n\n> .json, .js, .coffee, .html, .txt, .csv, .png, .jpg, .jpeg, .gif, .tif, .tiff, .zip\n\nProvide a path to an existing fixture file.",
+                "estack": "Error: A fixture file could not be found at any of the following paths:\n\n> cypress/fixtures/SampleFile.pdf\n> cypress/fixtures/SampleFile.pdf{{extension}}\n\nCypress looked for these file extensions at the provided path:\n\n> .json, .js, .coffee, .html, .txt, .csv, .png, .jpg, .jpeg, .gif, .tif, .tiff, .zip\n\nProvide a path to an existing fixture file.\n    at get (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/lib/errors.js:961:15)\n    at Object.throwErr [as throw] (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/lib/errors.js:979:9)\n    at Object.<anonymous> (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/lib/fixture.js:63:23)\n    at Object.tryCatcher (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:547:31)\n    at Promise._settlePromise (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:604:18)\n    at Promise._settlePromise0 (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:649:10)\n    at Promise._settlePromises (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:729:18)\n    at Promise._fulfill (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:673:18)\n    at /Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/nodeback.js:42:21\n    at f (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/once/once.js:25:25)\n    at Glob.<anonymous> (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:151:7)\n    at Glob.emit (events.js:315:20)\n    at Glob._finish (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:197:8)\n    at done (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:182:14)\n    at Glob._processSimple2 (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:688:12)\n    at /Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:676:10\n    at Glob._stat2 (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:772:12)\n    at lstatcb_ (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:764:12)\n    at RES (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/inflight/inflight.js:31:16)\n    at f (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/once/once.js:25:25)\n    at callback (/Users/hvaandres/Library/Caches/Cypress/6.2.1/Cypress.app/Contents/Resources/app/packages/server/node_modules/graceful-fs/polyfills.js:289:20)\n    at FSReqCallback.oncomplete (fs.js:172:21)\n",
+                "diff": null
+              },
+              "uuid": "3ecbf6ad-b518-41cb-8343-d4a451b76316",
+              "parentUUID": "c6396769-c3b0-4746-93e7-683dcbe2f4ed",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "3ecbf6ad-b518-41cb-8343-d4a451b76316"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1533,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
